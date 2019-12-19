@@ -52,6 +52,7 @@
     <Compile Include="EggBreackers\Grandma.cs" />
     <Compile Include="EggBreackers\Grandpa.cs" />
     <Compile Include="EggBreackers\Mouse.cs" />
+    <Compile Include="Keyboard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SRandom.cs" />

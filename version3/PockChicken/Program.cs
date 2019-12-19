@@ -9,15 +9,27 @@ using System.Threading.Tasks;
 
 namespace PockChicken
 {
-    
     class Program
     {
-        delegate void StartDelegate();
         static void Main(string[] args)
         {
-            StartDelegate startDelegate = Start;
-
-            startDelegate();
+            Keyboard keyboard = new Keyboard();
+            
+            keyboard.PressKeyY += PressKeyY_Handler;
+            keyboard.PressKeyN += PressKeyN_Handler;
+            
+            keyboard.Start("Начать сказку?(y/n)");
+        }
+        static private void PressKeyY_Handler()
+        {
+            Console.Clear();
+            StoryTeller storyTeller = new StoryTeller();
+            storyTeller.TellStory();
+        }
+        static private void PressKeyN_Handler()
+        {
+            Console.WriteLine("Выходим...");
+            return;
         }
         private static void Start()
         {
