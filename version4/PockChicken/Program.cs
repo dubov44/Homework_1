@@ -51,7 +51,7 @@ namespace PockChicken
         static private int GetNumber()
         {
             int number;
-            Console.WriteLine("Введите строку:");
+            Console.WriteLine("Введите количество сказок:");
             string input = Console.ReadLine();
 
             bool result = int.TryParse(input, out number);
@@ -66,7 +66,7 @@ namespace PockChicken
                 while(result != true)
                 {
                     Console.Clear();
-                    Console.WriteLine("Введите строку:");
+                    Console.WriteLine("Введите количество сказок:");
                     input = Console.ReadLine();
 
                     result = int.TryParse(input, out number);
