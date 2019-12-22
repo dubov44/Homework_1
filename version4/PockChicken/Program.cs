@@ -34,6 +34,8 @@ namespace PockChicken
                 t.Value.Start("Начать сказку?(y/n)");
                 Console.WriteLine();
             }
+
+            Console.ReadKey();
         }
         static private void PressKeyY_Handler()
         {
@@ -61,10 +63,18 @@ namespace PockChicken
             } 
             else
             {
-                Console.Clear();
-                GetNumber();
+                while(result != true)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Введите строку:");
+                    input = Console.ReadLine();
+
+                    result = int.TryParse(input, out number);
+                }
+                Console.WriteLine();
+                number = int.Parse(input);
+                return number;
             }
-            return 1;
         }
         //private static void Start()
         //{
